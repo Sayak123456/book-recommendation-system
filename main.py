@@ -11,8 +11,8 @@ def fetch_poster(isbn):
     st.text(url)
     return url
 
-books=pd.read_pickle(open('models/books.pkl','rb'))
-similarity=pickle.load(open('models/books_similarity.pkl','rb'))
+books=pd.read_pickle(open('books.pkl','rb'))
+similarity=pickle.load(open('books_similarity.pkl','rb'))
 #books.drop_duplicates(subset='title',keep='first',inplace=True)
 books_list=np.sort(books['title'].unique())
 #list=['Hi','Hello']
